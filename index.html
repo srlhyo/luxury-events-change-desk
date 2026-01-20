@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Desk - The Luxury Events</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>The Luxury Events</h1>
+            <p>Change Desk</p>
+        </header>
+
+        <main>
+            <form name="pedido-alteracao" method="POST" action="/obrigado.html" netlify>
+                <!-- Needed for Netlify to detect fields -->
+                <input type="hidden" name="form-name" value="pedido-alteracao">
+
+                <div class="form-group">
+                    <label for="local">Local (Secção)</label>
+                    <select name="local" id="local" required>
+                        <option value="">Selecione...</option>
+                        <option value="Home">Home / Topo</option>
+                        <option value="Servicos">Serviços</option>
+                        <option value="Pacotes">Pacotes</option>
+                        <option value="Galeria">Galeria</option>
+                        <option value="Como Funciona">Como Funciona</option>
+                        <option value="Contacto">Contacto</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo">Tipo de Alteração</label>
+                    <select name="tipo" id="tipo" required>
+                        <option value="Texto">Texto</option>
+                        <option value="Imagem">Imagem</option>
+                        <option value="Link">Link</option>
+                        <option value="Layout">Layout</option>
+                        <option value="Funcionalidade">Funcionalidade</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="prioridade">Prioridade</label>
+                    <select name="prioridade" id="prioridade" required>
+                        <option value="Normal">Normal</option>
+                        <option value="Alta">Alta</option>
+                        <option value="Urgente">Urgente</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="whatsapp_ref">Referência WhatsApp (Imagens)</label>
+                    <input type="text" name="whatsapp_ref" id="whatsapp_ref" placeholder="Ex: Enviado hoje às 14h30" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descricao">Descrição do Pedido</label>
+                    <textarea name="descricao" id="descricao" rows="6" placeholder="Descreva detalhadamente o que precisa de ser alterado..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Pedido</button>
+            </form>
+        </main>
+        
+        <footer>
+            <p>&copy; The Luxury Events - Internal Tool</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
