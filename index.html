@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Change Desk - The Luxury Events</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -14,7 +16,7 @@
         </header>
 
         <main>
-            <form name="pedido-alteracao" method="POST" action="/obrigado.html" netlify>
+            <form name="pedido-alteracao" method="POST" netlify>
                 <!-- Needed for Netlify to detect fields -->
                 <input type="hidden" name="form-name" value="pedido-alteracao">
 
@@ -53,23 +55,24 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="whatsapp_ref">Referência WhatsApp (Imagens)</label>
-                    <input type="text" name="whatsapp_ref" id="whatsapp_ref" placeholder="Ex: Enviado hoje às 14h30" required>
+                    <label for="whatsapp_ref">Referência WhatsApp (Imagens) <small>(Opcional)</small></label>
+                    <input type="text" name="whatsapp_ref" id="whatsapp_ref" placeholder="Ex: Enviado hoje às 14h30">
                 </div>
 
                 <div class="form-group">
                     <label for="descricao">Descrição do Pedido</label>
-                    <textarea name="descricao" id="descricao" rows="6" placeholder="Descreva detalhadamente o que precisa de ser alterado..." required></textarea>
+                    <textarea name="descricao" id="descricao" rows="6"
+                        placeholder="Descreva detalhadamente o que precisa de ser alterado..." required></textarea>
                 </div>
 
                 <button type="submit" class="btn-submit">Enviar Pedido</button>
             </form>
         </main>
-        
+
         <footer>
             <p>&copy; The Luxury Events - Internal Tool</p>
         </footer>
     </div>
-    <script src="app.js"></script>
 </body>
+
 </html>
